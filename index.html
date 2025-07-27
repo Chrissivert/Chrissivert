@@ -14,22 +14,20 @@
     gtag('config', 'G-HJRP378HPR');
   </script>
 
-  <!-- Counter.dev -->
-  <script async src="https://cdn.counter.dev/script.js"
-    data-id="chrissivert.github.io"
-    data-utcoffset="2"></script>
-
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to right, #1e0033, #001d3d);
-      color: #f0f0f0;
+      color: #cccccc;
       text-align: center;
       padding: 60px 20px;
+      position: relative;
+      z-index: 0;
     }
 
     h1 {
@@ -45,6 +43,9 @@
       margin-bottom: 60px;
     }
 
+
+    
+
     .project-section {
       display: flex;
       flex-wrap: wrap;
@@ -52,6 +53,8 @@
       gap: 50px;
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .project {
@@ -64,18 +67,42 @@
       font-weight: 400;
     }
 
-    video {
+    iframe {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 315px;
       border: none;
-      outline: none;
+      display: block;
     }
 
     footer {
       margin-top: 60px;
       font-size: 0.9em;
-      color: #999;
+      color: #888;
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon {
+      font-size: 40px; /* Larger icons */
+      width: 40px;
+      height: 40px;
+      color: #888;
+      transition: color 0.3s, transform 0.3s, filter 0.3s;
+    }
+
+    .icon:hover {
+      color: #ffffff;
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
     }
 
     @media (max-width: 768px) {
@@ -84,45 +111,200 @@
         gap: 40px;
       }
     }
+
+    /* Starfield canvas styles */
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* behind everything */
+      background: transparent;
+      display: block;
+    }
   </style>
 </head>
 <body>
+
   <h1>Chris Sivert Sylte</h1>
   <h2>Bachelor’s degree in Computer Science from NTNU Ålesund. Projects below</h2>
 
-<div class="project">
-  <div class="project-title">Chess digitization</div>
-  <iframe 
-    width="100%" 
-    height="315" 
-    src="https://www.youtube.com/embed/CZ-H54Ce9sU"
-    title="Chess digitization" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</div>
+  <!-- Starfield canvas -->
+  <canvas id="starfield"></canvas>
 
+  <div class="project-section">
+
+    <div class="project">
+      <div class="project-title">Chess digitization</div>
+      <iframe 
+        src="https://www.youtube.com/embed/CZ-H54Ce9sU"
+        title="Chess digitization" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
     <div class="project">
       <div class="project-title">CO₂ visualization tool</div>
-      <video controls>
-        <source src="co2.mp4" type="video/mp4" />
-        Nettleseren din støtter ikke video-taggen.
-      </video>
+      <iframe 
+        src="https://www.youtube.com/embed/hfN7bU1IEfo"
+        title="CO2 Visualization Tool" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
     </div>
 
     <div class="project">
       <div class="project-title">Greenhouse simulator</div>
-      <video controls>
-        <source src="greenhouse.mp4" type="video/mp4" />
-        Nettleseren din støtter ikke video-taggen.
-      </video>
+      <iframe 
+        src="https://www.youtube.com/embed/_hG0gTJOJDg"
+        title="Greenhouse Simulator" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
     </div>
+
+    <div class="project">
+      <div class="project-title">Aggregator website</div>
+      <iframe 
+        src="https://www.youtube.com/embed/LDpssH7j2ts"
+        title="Aggregator Website" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Zombie shooter</div>
+      <iframe 
+        src="https://www.youtube.com/embed/cBSTHTtsfBI"
+        title="Zombie Shooter" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Choice based game</div>
+      <iframe 
+        src="https://www.youtube.com/embed/5Rr_P6tBHdY"
+        title="Choice Based Game" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Budget application</div>
+      <iframe 
+        src="https://www.youtube.com/embed/nUnvoXOt_w0"
+        title="Budget Application" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Widgets (coming soon)</div>
+      <iframe 
+        src="https://www.youtube.com/embed/oew0y9An26c"
+        title="Widgets (Coming Soon)" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Warehouse (coming soon)</div>
+      <iframe 
+        src="https://www.youtube.com/embed/oew0y9An26c"
+        title="Warehouse (Coming Soon)" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 
   <footer>
-    Besøksstatistikk: Google Analytics + counter.dev
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@gt_jkr8023" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube icon"></i>
+      </a>
+      <a href="https://github.com/Chrissivert" target="_blank" aria-label="GitHub">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0a12 12 0 00-3.8 23.4c.6.1.8-.2.8-.5v-1.7c-3.3.7-4-1.5-4-1.5-.5-1.2-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.3 1.1 2.8.8.1-.6.3-1.1.6-1.3-2.7-.3-5.6-1.3-5.6-5.9 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.6-2.9 5.6-5.6 5.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.8.5A12 12 0 0012 0z"/>
+        </svg>
+      </a>
+    </div>
   </footer>
+
+  <script>
+    const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+const numStars = 100;
+let width, height;
+
+function init() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  stars = [];
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      z: Math.random() * width,
+      opacity: 0  // start fully transparent
+    });
+  }
+}
+
+function animate() {
+  ctx.fillStyle = '#1e0033'; // background color
+  ctx.fillRect(0, 0, width, height);
+
+  for (let i = 0; i < numStars; i++) {
+    let star = stars[i];
+    star.z -= 2; // star speed forward
+
+    if (star.z <= 0) {
+      star.x = Math.random() * width;
+      star.y = Math.random() * height;
+      star.z = width;
+      star.opacity = 0; // reset opacity when new star appears
+    }
+
+    // Increase opacity as star gets closer (z decreases)
+    // Map z from [width, 0] to opacity [0, 1]
+    star.opacity = 1 - star.z / width;
+    if (star.opacity > 1) star.opacity = 1;
+    if (star.opacity < 0) star.opacity = 0;
+
+    // 3D to 2D projection
+    let sx = (star.x - width / 2) * (width / star.z) + width / 2;
+    let sy = (star.y - height / 2) * (width / star.z) + height / 2;
+
+    let radius = (width / star.z) * 2;
+
+    if (sx < 0 || sx >= width || sy < 0 || sy >= height) continue;
+
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity.toFixed(2)})`;
+    ctx.arc(sx, sy, radius, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener('resize', init);
+
+init();
+animate();
+  </script>
 </body>
 </html>
