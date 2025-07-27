@@ -1,6 +1,6 @@
 ## Hello 👋
 For short demonstrations of my projects:
-https://www.youtube.com/@gt_jkr8023
+[Projects](https://chrissivert.github.io/Chrissivert/)
 <!--
 **Chrissivert/Chrissivert** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
